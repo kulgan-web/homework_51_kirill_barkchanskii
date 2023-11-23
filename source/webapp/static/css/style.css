@@ -1,0 +1,58 @@
+.title_div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.title_div p {
+    font-size: 45px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+
+.title_form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.input_name {
+    height: 25px;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.submit {
+    height: 30px;
+    width: 30%;
+    margin-left: 35%;
+}
+
+
+.photo {
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    margin-right: 30px;
+}
+
+img {
+    height: 100%;
+}
+
+
+.paragraph{
+    display: inline-block;
+    width: 350px;
+}
+
+
+p {
+    font-size: 32px;
+}
+
+.form {
+    width: 350px;
+    margin-left: 20px;
+}
+

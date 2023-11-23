@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Stats</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="photo">
+        {% for cat in cat_list %}
+            {% if cat.happy >= 30 and cat.happy < 70 %}
+                <img src="{% static 'img/1639011898_7-koshka-top-p-miloe-litso-kota-7.jpg' %}" alt="">
+            {% elif cat.happy >= 70 %}
+                <img src="{% static 'img/1663144957_1-kartinkin-net-p-dovolnoe-litso-kota-vkontakte-2.jpg' %}" alt="">
+            {% elif cat.happy < 30 %}
+                <img src="{% static 'img/1images.jpg' %}" alt="">
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="paragraph">
+        {% for cat in cat_list %}
+            <p>Кот - {{ cat.name }}</p>
+            <p>Возраст - {{ cat.age }} год</p>
+            <p>Уровень счастья - {{ cat.happy }}</p>
+            <p>Уровень сытости - {{ cat.satiety }}</p>
+        {% endfor %}
+    </div>
+
+
+    <div class="form">
+        <form action="" method="post"><br><br>
+        {% csrf_token %}
+
+            <select name="select" id="">
+                <option>Выберите действие</option>
+                <option value="play">Поиграть с котом</option>
+                <option value="feed">Покормить кота</option>
+                <option value="sleep">Уложить спать кота</option>
+            </select><br><br>
+            <input type="submit" value="подтвердить"/>
+
+        </form>
+    </div>
+
+</body>
+</html>
